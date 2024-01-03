@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { createClient, repositoryName } from "@/prismicio";
 import Header from "@/components/Header";
@@ -36,6 +38,8 @@ export default function RootLayout({
         <div className="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('/noisetexture.jpg')] opacity-20 mix-blend-soft-light"></div>
         <Footer />
         <PrismicPreview repositoryName={repositoryName} />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
