@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import Bounded from "@/components/Bounded";
-import { Shapes } from "./Shapes";
+import { Shapes } from "./Shapes.jsx";
 
 /**
  * Props for `Hero`.
@@ -36,7 +36,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             duration: 1,
             transformOrigin: "left top",
             stagger: { each: 0.1, from: "random" },
-          }
+          },
         )
         .fromTo(
           ".job-title",
@@ -51,7 +51,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             duration: 1,
             scale: 1,
             ease: "elastic.out(1,0.3)",
-          }
+          },
         );
     }, component);
     return () => ctx.revert(); // cleanup!
@@ -75,7 +75,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid min-h-[70vh] grid-cols-1 items-center md:grid-cols-2 text-center">
+      <div className="grid min-h-[70vh] grid-cols-1 items-center text-center md:grid-cols-2">
         <Shapes />
         <div className="col-start-1 md:row-start-1 " data-speed=".2">
           <h1
@@ -84,10 +84,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               slice.primary.first_name + " " + slice.primary.last_name
             }
           >
-            <span className="text-[clamp(3rem,20vmin,7.7rem)] ml-[.1em] block text-slate-300">
+            <span className="ml-[.1em] block text-[clamp(3rem,20vmin,7.7rem)] text-slate-300">
               {renderLetters(slice.primary.first_name, "first")}
             </span>
-            <span className="text-[clamp(3rem,20vmin,11rem)]  -mt-[.1em] block text-slate-500">
+            <span className="-mt-[.1em]  block text-[clamp(3rem,20vmin,11rem)] text-slate-500">
               {renderLetters(slice.primary.last_name, "last")}
             </span>
           </h1>
