@@ -84,14 +84,14 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               slice.primary.first_name + " " + slice.primary.last_name
             }
           >
-            <span className="ml-[.1em] block text-[clamp(3rem,20vmin,7.7rem)] text-slate-300">
+            <div className="ml-[.1em] block whitespace-nowrap text-[clamp(3rem,14vmin,7.7rem)] text-slate-300 max-lg:text-[clamp(3rem,14vmin,5rem)]">
               {renderLetters(slice.primary.first_name, "first")}
-            </span>
-            <span className="-mt-[.1em]  block text-[clamp(3rem,20vmin,11rem)] text-slate-500">
+            </div>
+            <div className="-mt-[.1em] block whitespace-nowrap text-[clamp(3rem,20vmin,11rem)] text-slate-500 max-lg:text-[clamp(3rem,20vmin,7rem)]">
               {renderLetters(slice.primary.last_name, "last")}
-            </span>
+            </div>
           </h1>
-          <span className="job-title block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl">
+          <span className="job-title block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-3xl">
             {slice.primary.tag_line}
           </span>
         </div>
