@@ -7,15 +7,6 @@ import ContentBody from "@/components/ContentBody";
 
 type Params = { uid: string };
 
-export default async function Page({ params }: { params: Params }) {
-  const client = createClient();
-  const page = await client
-    .getByUID("blog_post", params.uid)
-    .catch(() => notFound());
-
-  return <ContentBody page={page} />;
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -39,4 +30,13 @@ export async function generateStaticParams() {
   return pages.map((page) => {
     return { uid: page.uid };
   });
+}
+
+export default async function Page({ params }: { params: Params }) {
+  const client = createClient();
+  const page = await client
+    .getByUID("blog_post", params.uid)
+    .catch(() => notFound());
+
+  return <ContentBody page={page} />;
 }

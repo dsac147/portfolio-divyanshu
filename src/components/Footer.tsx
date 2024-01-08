@@ -1,10 +1,9 @@
 import React from "react";
 import { createClient } from "@/prismicio";
 import { PrismicNextLink } from "@prismicio/next";
-import Link from "next/link";
 import clsx from "clsx";
 import { isFilled } from "@prismicio/client";
-import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 
 import Bounded from "@/components/Bounded";
 
@@ -26,7 +25,7 @@ export default async function Footer() {
                 <li>
                   <PrismicNextLink
                     className={clsx(
-                      "group relative block overflow-hidden  rounded px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-150 hover:hover:text-yellow-400"
+                      "group relative block overflow-hidden  rounded px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-150 hover:hover:text-yellow-400",
                     )}
                     field={link}
                   >

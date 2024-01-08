@@ -1,0 +1,34 @@
+{
+  "id": "project_links_block",
+  "type": "SharedSlice",
+  "name": "ProjectLinksBlock",
+  "description": "ProjectLinksBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "link_name": {
+          "type": "Text",
+          "config": {
+            "label": "Link Name",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}
